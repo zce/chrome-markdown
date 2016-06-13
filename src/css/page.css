@@ -1,0 +1,86 @@
+body {
+  min-width: 300px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+
+/*@media (min-width: 768px) {
+  body {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    width: 1170px;
+  }
+}*/
+
+.markdown-body {
+  margin: 30px;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.markdown-body a {
+  /*color: #1EAEDB;*/
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.markdown-body hr {
+  height: 1px;
+  margin: 100px 0;
+}
+
+.markdown-body hr:after {
+  content: "华丽的分割线";
+  color: #ccc;
+  position: absolute;
+  left: 50%;
+  margin-left: -38px;
+  margin-top: -9px;
+  background-color: #fff;
+  padding: 0 2px;
+  font-size: 12px;
+}
+
+.markdown-source {
+  background: none;
+  margin: 30px;
+  padding: 0;
+}
+
+.disabled .markdown-body,
+.enabled .markdown-source {
+  display: none;
+}
+
+.enabled .markdown-body,
+.disabled .markdown-source {
+  display: block;
+}
+
+@media print {
+  .markdown-body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
