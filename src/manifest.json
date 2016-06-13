@@ -1,15 +1,6 @@
 {
-   "background": {
-      "scripts": [ "js/background.js" ]
-   },
-   "browser_action": {
-      "default_icon": "img/on-38.png",
-      "default_title": "Chrome Markdown"
-   },
-   "content_scripts": [ {
-      "js": [ "js/highlight.js", "js/marked.js", "js/plugin.js" ],
-      "matches": [ "http://*/*.md", "http://*/*.mdown", "http://*/*.markdown", "https://*/*.md", "https://*/*.mdown", "https://*/*.markdown", "file://*/*.md", "file://*/*.mdown", "file://*/*.markdown" ]
-   } ],
+   "name": "Chrome Markdown Preview",
+   "version": "1.0.2",
    "description": "Preview GitHub Flavored Markdown in Chrome",
    "icons": {
       "128": "img/on-128.png",
@@ -18,8 +9,17 @@
       "16": "img/on-16.png"
    },
    "manifest_version": 2,
-   "name": "Chrome Markdown",
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/on-38.png",
+      "default_title": "Chrome Markdown Preview"
+   },
+   "content_scripts": [ {
+      "js": [ "js/highlight.js", "js/marked.js", "js/plugin.js" ],
+      "matches": [ "http://*/*.md", "http://*/*.mdown", "http://*/*.markdown", "https://*/*.md", "https://*/*.mdown", "https://*/*.markdown", "file://*/*.md", "file://*/*.mdown", "file://*/*.markdown" ]
+   } ],
    "permissions": [ "storage" ],
-   "version": "1.0.0",
    "web_accessible_resources": [ "css/markdown.css", "css/default.css", "css/github.css", "css/page.css" ]
 }

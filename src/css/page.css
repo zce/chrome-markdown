@@ -1,3 +1,23 @@
+::selection {
+  color: #fff;
+  background: #bee4fd;
+  text-shadow: none;
+}
+
+::-webkit-scrollbar {
+  width: .3rem;
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: .3rem;
+  background-color: #aaa;
+}
+
 body {
   min-width: 300px;
   max-width: 1280px;
