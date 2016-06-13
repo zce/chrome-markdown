@@ -2,7 +2,6 @@ var type = (document.contentType || 'unknown').toLowerCase()
 
 if ((type === 'text/plain') || (type === 'text/markdown')) {
   chrome.storage.local.get({ enabled: true }, function (config) {
-
     // Local variables
     var enabled = config.enabled
     var console = window.console
@@ -20,7 +19,7 @@ if ((type === 'text/plain') || (type === 'text/markdown')) {
     })
 
     // Add our stylesheets
-    ;(function css() {
+    ;(function css () {
       for (var i = 0; i < arguments.length; i++) {
         var href = chrome.extension.getURL('css/' + arguments[i] + '.css')
         if (href) {
@@ -30,7 +29,7 @@ if ((type === 'text/plain') || (type === 'text/markdown')) {
           document.head.appendChild(link)
         }
       }
-    })("markdown", "default", "github", "page")
+    })('markdown', 'default', 'github', 'page')
 
     // Get a list of valid languages
     var languages = {}
@@ -41,7 +40,6 @@ if ((type === 'text/plain') || (type === 'text/markdown')) {
     // Set up marked with our highlight parser
     marked.setOptions({
       highlight: function (data, lang) {
-
         // Language case normalization
         lang = lang && lang.toLowerCase()
 
@@ -54,18 +52,17 @@ if ((type === 'text/plain') || (type === 'text/markdown')) {
 
         // Wrap in a class with whatever language we found
         return '<code class="hljs ' + data.language + '">' + data.value + '</code>'
-
       }
     })
 
     // Recreate the body given some markdown text
-    function render(markdown) {
+    function render (markdown) {
       // Highlight as markdown, and render markdown
       var highlighted = hljs.highlight('markdown', markdown, true).value
       var rendered = marked.parse(markdown)
 
       // Setup the document's body
-      document.body.innerHTML = '<pre class="hljs markdown markdown-source">' + highlighted + '</pre><article class="markdown-body">' + rendered + "</article>"
+      document.body.innerHTML = '<pre class="hljs markdown markdown-source">' + highlighted + '</pre><article class="markdown-body">' + rendered + '</article>'
 
       // Return the original markdown
       return markdown
@@ -74,17 +71,15 @@ if ((type === 'text/plain') || (type === 'text/markdown')) {
     // Evaluate our root <pre>, containing the text
     var pre = document.body.getElementsByTagName('pre')[0]
     if (pre && pre.firstChild) {
-
       // Remember the original text we loaded
       md = render(pre.firstChild.nodeValue)
 
       // Set a timer checking for file (only) changes
       if (window.location.href.startsWith('file://')) {
-        console.log("Checking for changes on " + window.location.href + " every 3 seconds")
+        console.log('Checking for changes on ' + window.location.href + ' every 3 seconds')
 
         // Set running on interval...
         window.setInterval(function () {
-
           // Use an XMLHttpRequest
           var request = new XMLHttpRequest()
           request.open('GET', window.location.href)
@@ -96,20 +91,18 @@ if ((type === 'text/plain') || (type === 'text/markdown')) {
 
             // Check if the text was changed
             var text = request.responseText
-            if (text == md) return
+            if (text === md) return
 
             // Some changes here... Re-render and save the content
-            console.log("Changes detected on " + window.location.href)
+            console.log('Changes detected on ' + window.location.href)
             md = render(text)
           }
-
         }, 3000)
       } else {
-        console.log("Not checking for changes on " + window.location.href + ", reload manually")
+        console.log('Not checking for changes on ' + window.location.href + ', reload manually')
       }
     }
-
   })
 } else {
-  console.log("Not rendering markdown for content type \"" + type + "\"")
+  console.log('Not rendering markdown for content type: ' + type)
 }
