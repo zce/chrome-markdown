@@ -6,7 +6,13 @@
 
 Preview GitHub Flavored Markdown in Chrome
 
-## How to use
+## Chrome Store
+
+https://chrome.google.com/webstore/detail/chrome-markdown-preview/ghmocdlbmpcchcbkkingnkgemjacgfdf
+
+## for Developer
+
+### How to use
 
 First, clone the repo via git:
 
@@ -22,7 +28,7 @@ $ cd chrome-markdown
 $ npm install
 ```
 
-### Build it
+#### Build it
 
 ```bash
 $ gulp
@@ -30,6 +36,6 @@ $ gulp
 
 *Note: requires a node version >= 4 and an npm version >= 2.*
 
-### Use it
+#### Use it
 
 Please use it in Google Chrome.
