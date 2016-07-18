@@ -6,6 +6,8 @@
 
 Preview GitHub Flavored Markdown in Chrome
 
+-----
+
 ## How to use
 
 First, clone the repo via git:

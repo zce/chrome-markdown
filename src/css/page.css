@@ -1,3 +1,4 @@
+﻿@charset 'UTF-8';
 ::selection {
   color: #fff;
   background: #bee4fd;
@@ -62,6 +63,45 @@ body {
 .markdown-body h6 {
   margin-top: 2em;
   margin-bottom: 1em;
+}
+
+@media screen {
+  .markdown-body h1::after,
+  .markdown-body h2::after,
+  .markdown-body h3::after,
+  .markdown-body h4::after,
+  .markdown-body h5::after,
+  .markdown-body h6::after {
+    color: #f5f5f5;
+    font-size: .8em;
+    margin-left: 1em;
+  }
+  .markdown-body h1:hover::after,
+  .markdown-body h2:hover::after,
+  .markdown-body h3:hover::after,
+  .markdown-body h4:hover::after,
+  .markdown-body h5:hover::after,
+  .markdown-body h6:hover::after {
+    color: #c0c0c0;
+  }
+  .markdown-body h1::after {
+    content: 'h1'
+  }
+  .markdown-body h2::after {
+    content: 'h2'
+  }
+  .markdown-body h3::after {
+    content: 'h3'
+  }
+  .markdown-body h4::after {
+    content: 'h4'
+  }
+  .markdown-body h5::after {
+    content: 'h5'
+  }
+  .markdown-body h6::after {
+    content: 'h6'
+  }
 }
 
 .markdown-body hr {
