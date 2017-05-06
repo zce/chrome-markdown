@@ -1,6 +1,6 @@
 {
    "name": "Chrome Markdown Preview",
-   "version": "1.1.0",
+   "version": "1.1.1",
    "description": "Preview GitHub Flavored Markdown in Chrome",
    "icons": {
       "128": "img/on-128.png",

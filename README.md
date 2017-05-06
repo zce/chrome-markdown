@@ -1,26 +1,34 @@
 # chrome-markdown
 
-[![Build Status](https://travis-ci.org/zce/chrome-markdown.svg?branch=master)](https://travis-ci.org/zce/chrome-markdown)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-[![Build Status](https://david-dm.org/zce/chrome-markdown.svg)](https://david-dm.org/zce/chrome-markdown)
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][dependency-image]][dependency-url]
+[![devDependency Status][devdependency-image]][devdependency-url]
+[![Code Style][style-image]][style-url]
 
-Preview GitHub Flavored Markdown in Chrome
+[travis-image]: https://img.shields.io/travis/zce/chrome-markdown/master.svg
+[travis-url]: https://travis-ci.org/zce/chrome-markdown
+[dependency-image]: https://img.shields.io/david/zce/chrome-markdown.svg
+[dependency-url]: https://david-dm.org/zce/chrome-markdown
+[devdependency-image]: https://img.shields.io/david/dev/zce/chrome-markdown.svg
+[devdependency-url]: https://david-dm.org/zce/chrome-markdown?type=dev
+[style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
+[style-url]: http://standardjs.com/
 
-<<<<<<< HEAD
------
+> Preview GitHub Flavored Markdown in Chrome
 
-## How to use
-=======
+---
+
+
 ## Chrome Store
 
 https://chrome.google.com/webstore/detail/chrome-markdown-preview/ghmocdlbmpcchcbkkingnkgemjacgfdf
 
+
 ## for Developer
 
 ### How to use
->>>>>>> d5f50172e00cc024b47b343560025ff3b9370237
 
-First, clone the repo via git:
+Clone the repo via git:
 
 ```bash
 $ cd path/to/root
@@ -34,14 +42,10 @@ $ cd chrome-markdown
 $ npm install
 ```
 
-#### Build it
+### Build it
 
 ```bash
 $ gulp
 ```
 
 *Note: requires a node version >= 4 and an npm version >= 2.*
-
-#### Use it
-
-Please use it in Google Chrome.

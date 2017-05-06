@@ -37,8 +37,18 @@ if ((type === 'text/plain') || (type === 'text/markdown')) {
       languages[lang.toLowerCase()] = lang
     })
 
+    // var toc = []
+    // var renderer = new marked.Renderer()
+
+    // renderer.heading = function(text, level, raw) {
+    //   var anchor = this.options.headerPrefix + raw.toLowerCase().replace(/[^\w]+/g, '-')
+    //   toc.push({ anchor: anchor, level: level, text: text })
+    //   return '<h'+ level+ ' id="'+ anchor+ '">'+ text+ '</h'+ level+ '>\n'
+    // }
+
     // Set up marked with our highlight parser
     marked.setOptions({
+      // renderer: renderer,
       highlight: function (data, lang) {
         // Language case normalization
         lang = lang && lang.toLowerCase()
@@ -51,7 +61,8 @@ if ((type === 'text/plain') || (type === 'text/markdown')) {
         }
 
         // Wrap in a class with whatever language we found
-        return '<code class="hljs ' + data.language + '">' + data.value + '</code>'
+        // return '<code class="hljs ' + data.language + '">' + data.value + '</code>'
+        return data.value
       }
     })
 
@@ -60,6 +71,14 @@ if ((type === 'text/plain') || (type === 'text/markdown')) {
       // Highlight as markdown, and render markdown
       var highlighted = hljs.highlight('markdown', markdown, true).value
       var rendered = marked.parse(markdown)
+
+      // var tocHTML = '<ul>\n'
+      // toc.forEach(function (entry) {
+      //   tocHTML += '<li><a href="#' + entry.anchor + '">' + entry.text + '</a></li>\n'
+      // })
+      // tocHTML += '</ul>\n'
+
+      // rendered = rendered.replace(/\[TOC\]/g, tocHTML)
 
       // Setup the document's body
       document.body.innerHTML = '<pre class="hljs markdown markdown-source">' + highlighted + '</pre><article class="markdown-body">' + rendered + '</article>'
