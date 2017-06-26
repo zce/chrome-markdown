@@ -1,6 +1,6 @@
 {
   "name": "chrome-markdown",
-  "version": "1.0.1",
+  "version": "1.2.1",
   "description": "Preview GitHub Flavored Markdown in Chrome",
   "main": "dist/manifest.json",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/zce/chrome-markdown#readme",
   "devDependencies": {
-    "del": "^2.2.0",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-uglify": "^3.0.0",

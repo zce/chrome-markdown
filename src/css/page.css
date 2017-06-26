@@ -1,4 +1,4 @@
-﻿::selection {
+﻿/*::selection {
   color: #fff;
   background: #bee4fd;
   text-shadow: none;
@@ -16,12 +16,15 @@
 ::-webkit-scrollbar-thumb {
   border-radius: .3rem;
   background-color: #aaa;
-}
+}*/
 
 body {
   min-width: 300px;
   max-width: 1200px;
   margin: 0 auto;
+  background: #e7eef2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /*@media (min-width: 768px) {
@@ -49,6 +52,10 @@ body {
   padding: 5% 4%;
   border: 1px solid #ddd;
   border-radius: 4px;
+  color: #57676e;
+  background: #fff;
+  border-color: #C3CCD0;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0), 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /*.markdown-body a {
@@ -63,6 +70,7 @@ body {
 .markdown-body h6 {
   margin-top: 2em;
   margin-bottom: 1em;
+  font-weight: 500;
 }
 
 /* 源码显示 */
@@ -128,16 +136,6 @@ h5 {
   content: counter(h2) "." counter(h3) "." counter(h4) ". "
 }
 
-.markdown-body h5:before {
-  counter-increment: h5;
-  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". "
-}
-
-.markdown-body h6:before {
-  counter-increment: h6;
-  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "
-}
-
 /*.markdown-body h1:before {
   counter-increment: h1;
   content: counter(h1) ". "
@@ -167,6 +165,30 @@ h5 {
   counter-increment: h6;
   content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "
 }*/
+
+/*.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+}
+
+.markdown-body h1:before,
+.markdown-body h2:before,
+.markdown-body h3:before,
+.markdown-body h4:before,
+.markdown-body h5:before,
+.markdown-body h6:before {
+  position: absolute;
+  right: 101%;
+}
+
+.markdown-body {
+  padding-left: 7%;
+}*/
+
 
 /* 标题级别标记 */
 
