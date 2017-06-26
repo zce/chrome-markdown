@@ -11,14 +11,14 @@
    },
    "manifest_version": 2,
    "background": {
-      "scripts": [ "js/background.js" ]
+      "scripts": [ "scripts/background.js" ]
    },
    "browser_action": {
       "default_icon": "img/on-38.png",
       "default_title": "Chrome Markdown Preview"
    },
    "content_scripts": [ {
-      "js": [ "js/highlight.js", "js/marked.js", "js/plugin.js" ],
+      "js": [ "scripts/highlight.js", "scripts/marked.js", "scripts/plugin.js" ],
       "matches": [ "http://*/*.md", "http://*/*.mdown", "http://*/*.markdown", "https://*/*.md", "https://*/*.mdown", "https://*/*.markdown", "file://*/*.md", "file://*/*.mdown", "file://*/*.markdown" ]
    } ],
    "permissions": [ "storage" ],

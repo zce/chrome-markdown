@@ -1,0 +1,51 @@
+{
+	"name": "Chrome Markdown Preview",
+	"version": "1.2.2",
+	"short_name": "markdown-preview",
+	"description": "Preview GitHub Flavored Markdown in Chrome",
+	"icons": {
+		"16": "img/on-16.png",
+		"38": "img/on-38.png",
+		"48": "img/on-48.png",
+		"128": "img/on-128.png"
+	},
+	"manifest_version": 2,
+	"background": {
+		"scripts": [
+			"scripts/background.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": "img/on-38.png",
+		"default_title": "Chrome Markdown Preview"
+	},
+	"content_scripts": [
+		{
+			"js": [
+				"scripts/highlight.js",
+				"scripts/marked.js",
+				"scripts/plugin.js"
+			],
+			"matches": [
+				"http://*/*.md",
+				"http://*/*.mdown",
+				"http://*/*.markdown",
+				"https://*/*.md",
+				"https://*/*.mdown",
+				"https://*/*.markdown",
+				"file://*/*.md",
+				"file://*/*.mdown",
+				"file://*/*.markdown"
+			]
+		}
+	],
+	"permissions": [
+		"storage"
+	],
+	"web_accessible_resources": [
+		"css/markdown.css",
+		"css/default.css",
+		"css/github.css",
+		"css/page.css"
+	]
+}
