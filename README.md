@@ -18,6 +18,10 @@
 
 ---
 
+## Preview
+
+![](assets/screenshot.png)
+
 
 ## Chrome Store
 
