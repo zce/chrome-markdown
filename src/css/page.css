@@ -118,16 +118,28 @@ h3 {
 .markdown-body h2:before {
   content: counter(h2) '. ';
   counter-increment: h2;
+  
+  color: #87979e;
+  
+  font-size: .8em;
 }
 
 .markdown-body h3:before {
   content: counter(h2) '.' counter(h3) '. ';
   counter-increment: h3;
+  
+  color: #87979e;
+  
+  font-size: .8em;
 }
 
 .markdown-body h4:before {
   content: counter(h2) '.' counter(h3) '.' counter(h4) '. ';
   counter-increment: h4;
+  
+  color: #87979e;
+  
+  font-size: .8em;
 }
 
 /*
