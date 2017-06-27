@@ -1,13 +1,14 @@
 const gulp = require('gulp')
-const cssnano = require('gulp-cssnano')
+const cleanCss = require('gulp-clean-css')
 const uglify = require('gulp-uglify')
+const zip = require('gulp-zip')
 const del = require('del')
 
 gulp.task('clean', del.bind(null, ['dist']))
 
 gulp.task('styles', () => {
   return gulp.src(['src/css/**/*.css', '!src/css/md.css'], { base: 'src' })
-    .pipe(cssnano())
+    .pipe(cleanCss())
     .pipe(gulp.dest('dist'))
 })
 
@@ -27,6 +28,10 @@ gulp.task('manifest', () => {
     .pipe(gulp.dest('dist'))
 })
 
-gulp.task('default', ['clean'], () => {
-  return gulp.start(['styles', 'scripts', 'images', 'manifest'])
+gulp.task('build', ['styles', 'scripts', 'images', 'manifest'])
+
+gulp.task('archive', ['build'], () => {
+  return gulp.src('dist/**/*')
+    .pipe(zip('archive.zip'))
+    .pipe(gulp.dest('dist'))
 })

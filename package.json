@@ -1,11 +1,12 @@
 {
   "name": "chrome-markdown",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Preview GitHub Flavored Markdown in Chrome",
   "main": "dist/manifest.json",
   "scripts": {
     "lint": "standard \"src/js/plugin.js\" \"src/js/background.js\"",
-    "build": "gulp"
+    "build": "gulp build",
+    "archive": "gulp archive"
   },
   "repository": {
     "type": "git",
@@ -13,9 +14,10 @@
   },
   "keywords": [
     "chrome",
-    "markdown"
+    "markdown",
+    "markdown preview"
   ],
-  "author": "iceStone <ice@wedn.net> (http://www.wedn.net/)",
+  "author": "iceStone <ice@wedn.net> (https://github.com/zce)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zce/chrome-markdown/issues"
@@ -24,8 +26,9 @@
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-cssnano": "^2.1.2",
+    "gulp-clean-css": "^3.4.2",
     "gulp-uglify": "^3.0.0",
+    "gulp-zip": "^4.0.0",
     "standard": "^10.0.2"
   },
   "standard": {
