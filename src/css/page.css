@@ -1,4 +1,4 @@
-﻿body {
+body {
   min-width: 300px;
   max-width: 1160px;
   margin: 0 auto;
@@ -12,31 +12,35 @@
 /* 默认样式调整 */
 
 .markdown-body {
-  margin: 30px;
+  margin: 2em;
   padding: 5% 4%;
 
   color: #57676e;
   border: 1px solid #ddd;
   border-color: #C3CCD0;
-  border-radius: 4px;
+  border-radius: .25em;
   background: #fff;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0), 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0), 0 0 1em rgba(0, 0, 0, 0.1);
+
+  line-height: 1.8;
 }
 
 .markdown-body img {
   display: block;
+
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 1em 0;
 }
 
 .markdown-body blockquote {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 1em 0;
 
-  border-width: 5px;
-
+  border-width: .5em;
   background-color: #f8f9fa;
+}
+
+.markdown-body li + li {
+  margin-top: .5em;
 }
 
 .markdown-body p,
@@ -46,7 +50,7 @@
 .markdown-body table,
 .markdown-body pre,
 .markdown-body blockquote {
-  margin-bottom: 20px;
+  margin-bottom: 1.5em;
 }
 
 .markdown-body h1,
@@ -55,8 +59,8 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 2em;
+  margin-bottom: 1em;
 
   font-weight: 500;
 }
@@ -64,7 +68,7 @@
 /* 源码显示 */
 
 .markdown-source {
-  margin: 30px;
+  margin: 2em;
   padding: 0;
 
   background: none;
@@ -99,31 +103,27 @@ h3 {
 
 
 /** put counter result into headings */
-.markdown-body h2:before {
+.markdown-body h2::before,
+.markdown-body h3::before,
+.markdown-body h4::before {
+  color: #a6b3b8;
+
+  font-size: .9em;
+}
+
+.markdown-body h2::before {
   content: counter(h2) '. ';
   counter-increment: h2;
-
-  color: #87979e;
-
-  font-size: .8em;
 }
 
-.markdown-body h3:before {
+.markdown-body h3::before {
   content: counter(h2) '.' counter(h3) '. ';
   counter-increment: h3;
-
-  color: #87979e;
-
-  font-size: .8em;
 }
 
-.markdown-body h4:before {
+.markdown-body h4::before {
   content: counter(h2) '.' counter(h3) '.' counter(h4) '. ';
   counter-increment: h4;
-
-  color: #87979e;
-
-  font-size: .8em;
 }
 
 /* 标题级别标记 */
@@ -136,16 +136,16 @@ h3 {
   .markdown-body h5::after,
   .markdown-body h6::after {
     margin-left: 1em;
-    padding: 3px 5px;
+    padding: .125em .25em;
 
-    transition: color .3s, border .3s;
+    transition: color .2s, border .2s;
     vertical-align: middle;
 
     color: #f5f5f5;
     border: 1px solid #f9f9f9;
-    border-radius: 20%;
+    border-radius: 25%;
 
-    font-size: .4em;
+    font-size: .5em;
   }
 
   .markdown-body h1:hover::after,
@@ -188,7 +188,7 @@ h3 {
     margin: 100px 0;
   }
 
-  .markdown-body hr:after {
+  .markdown-body hr::after {
     position: absolute;
     left: 50%;
 
