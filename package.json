@@ -1,6 +1,6 @@
 {
   "name": "chrome-markdown",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Preview GitHub Flavored Markdown in Chrome",
   "main": "dist/manifest.json",
   "scripts": {

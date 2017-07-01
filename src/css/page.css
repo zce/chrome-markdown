@@ -29,14 +29,18 @@ body {
   display: block;
 
   margin: 0 auto;
-  padding: 1em 0;
+  padding: 1em;
 }
 
 .markdown-body blockquote {
-  padding: 1em 0;
+  padding: 1em;
 
   border-width: .5em;
   background-color: #f8f9fa;
+}
+
+.markdown-body pre {
+  padding: 20px 16px;
 }
 
 .markdown-body li + li {
