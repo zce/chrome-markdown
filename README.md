@@ -36,7 +36,7 @@ Clone the repo via git:
 
 ```bash
 $ cd path/to/root
-$ git clone https://github.com/zce/chrome-markdown.git -b master
+$ git clone https://github.com/zce/chrome-markdown.git
 ```
 
 And then install dependencies.
@@ -49,7 +49,16 @@ $ npm install
 ### Build it
 
 ```bash
-$ gulp
+$ gulp build
+# archive
+$ gulp archive
 ```
 
 *Note: requires a node version >= 4 and an npm version >= 2.*
+
+
+## TODOS
+
+- [ ] Support Table of Content
+- [ ] Support YAML front matter
+- [ ] Support Draw Diagrams
