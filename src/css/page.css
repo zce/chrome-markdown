@@ -27,6 +27,7 @@ body {
 .markdown-body img {
   display: block;
 
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 1em;
 }
