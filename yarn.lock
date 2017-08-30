@@ -163,9 +163,9 @@ circular-json@^0.3.1:
   version "0.3.1"
   resolved "http://registry.npm.taobao.org/circular-json/download/circular-json-0.3.1.tgz#be8b36aefccde8b3ca7aa2d6afc07a37242c0d2d"
 
-clean-css@4.1.5:
-  version "4.1.5"
-  resolved "http://registry.npm.taobao.org/clean-css/download/clean-css-4.1.5.tgz#d09a87a02a5375117589796ae76a063cacdb541a"
+clean-css@4.1.7:
+  version "4.1.7"
+  resolved "http://registry.npm.taobao.org/clean-css/download/clean-css-4.1.7.tgz#b9aea4f85679889cf3eae8b40349ec4ebdfdd032"
   dependencies:
     source-map "0.5.x"
 
@@ -420,9 +420,9 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-standard-jsx@4.0.1:
-  version "4.0.1"
-  resolved "http://registry.npm.taobao.org/eslint-config-standard-jsx/download/eslint-config-standard-jsx-4.0.1.tgz#cd4e463d0268e2d9e707f61f42f73f5b3333c642"
+eslint-config-standard-jsx@4.0.2:
+  version "4.0.2"
+  resolved "http://registry.npm.taobao.org/eslint-config-standard-jsx/download/eslint-config-standard-jsx-4.0.2.tgz#009e53c4ddb1e9ee70b4650ffe63a7f39f8836e1"
 
 eslint-config-standard@10.2.1:
   version "10.2.1"
@@ -892,11 +892,11 @@ graceful-fs@~1.2.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/graceful-readlink/download/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-gulp-clean-css@^3.5.0:
-  version "3.5.0"
-  resolved "http://registry.npm.taobao.org/gulp-clean-css/download/gulp-clean-css-3.5.0.tgz#d43e747c41957995ec49bb9612f862b64329f1b0"
+gulp-clean-css@^3.7.0:
+  version "3.7.0"
+  resolved "http://registry.npm.taobao.org/gulp-clean-css/download/gulp-clean-css-3.7.0.tgz#54b33526dc899930949fb37b4cacf851c5d5d93b"
   dependencies:
-    clean-css "4.1.5"
+    clean-css "4.1.7"
     gulp-util "3.0.8"
     through2 "2.0.3"
     vinyl-sourcemaps-apply "0.2.1"
@@ -1903,13 +1903,13 @@ standard-engine@~7.0.0:
     minimist "^1.1.0"
     pkg-conf "^2.0.0"
 
-standard@^10.0.2:
-  version "10.0.2"
-  resolved "http://registry.npm.taobao.org/standard/download/standard-10.0.2.tgz#974c1c53cc865b075a4b576e78441e1695daaf7b"
+standard@^10.0.3:
+  version "10.0.3"
+  resolved "http://registry.npm.taobao.org/standard/download/standard-10.0.3.tgz#7869bcbf422bdeeaab689a1ffb1fea9677dd50ea"
   dependencies:
     eslint "~3.19.0"
     eslint-config-standard "10.2.1"
-    eslint-config-standard-jsx "4.0.1"
+    eslint-config-standard-jsx "4.0.2"
     eslint-plugin-import "~2.2.0"
     eslint-plugin-node "~4.2.2"
     eslint-plugin-promise "~3.5.0"

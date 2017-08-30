@@ -1,6 +1,6 @@
 {
   "name": "chrome-markdown",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Preview GitHub Flavored Markdown in Chrome",
   "main": "dist/manifest.json",
   "scripts": {
@@ -26,10 +26,10 @@
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.5.0",
+    "gulp-clean-css": "^3.7.0",
     "gulp-uglify": "^3.0.0",
     "gulp-zip": "^4.0.0",
-    "standard": "^10.0.2"
+    "standard": "^10.0.3"
   },
   "standard": {
     "globals": [
