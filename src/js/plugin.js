@@ -95,28 +95,35 @@ if ((type === 'text/plain') || (type === 'text/markdown')) {
 
       // Set a timer checking for file (only) changes
       if (window.location.href.startsWith('file://')) {
-        console.log('Checking for changes on ' + window.location.href + ' every 3 seconds')
+        console.log('Checking for changes on ' + window.location.href + ' every 5 seconds')
 
-        // Set running on interval...
-        window.setInterval(function () {
+        function update () {
           // Use an XMLHttpRequest
-          var request = new XMLHttpRequest()
-          request.open('GET', window.location.href)
-          request.send()
+          var xhr = new XMLHttpRequest()
+          xhr.open('GET', window.location.href)
 
           // Get notification when the state changes
-          request.onreadystatechange = function () {
-            if (request.readyState !== 4) return
+          xhr.onreadystatechange = function () {
+            if (this.readyState !== 4 || this.status !== 200) return
 
             // Check if the text was changed
-            var text = request.responseText
+            var text = this.responseText
             if (text === md) return
 
             // Some changes here... Re-render and save the content
             console.log('Changes detected on ' + window.location.href)
             md = render(text)
+
+            setTimeout(update, 5000)
           }
-        }, 3000)
+
+          try {
+            xhr.send()
+          } catch (e) {
+            console.log(e.message)
+          }
+        }
+        setTimeout(update, 5000)
       } else {
         console.log('Not checking for changes on ' + window.location.href + ', reload manually')
       }
