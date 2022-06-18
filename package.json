@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/zce/chrome-markdown#readme",
   "devDependencies": {
-    "del": "5.1.0",
+    "del": "6.1.1",
     "gulp": "4.0.2",
     "gulp-clean-css": "4.2.0",
     "gulp-uglify": "3.0.2",
